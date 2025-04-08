@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     "octofit_tracker",
 ]
 INSTALLED_APPS = list(dict.fromkeys(INSTALLED_APPS))
+INSTALLED_APPS += [
+    'channels',
+]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -75,6 +78,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 
+# Channels configuration
+ASGI_APPLICATION = 'octofit_tracker.asgi.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
