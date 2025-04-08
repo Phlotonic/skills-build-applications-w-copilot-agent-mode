@@ -26,6 +26,7 @@ SECRET_KEY = "django-insecure-yf5^3_y88o1g3h20)9o_-aq$nm8exwm%imda8(_bt^6vh$7i*a
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS += ['upgraded-space-parakeet-6prv75ggp943r5wj-8000.app.github.dev', 'localhost']
 
 
 # Application definition
